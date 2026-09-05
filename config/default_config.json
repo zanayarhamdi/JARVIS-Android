@@ -1,0 +1,52 @@
+{
+  "jarvis": {
+    "name": "JARVIS",
+    "version": "1.0.0",
+    "personality": "calm, precise, polite, context-aware",
+    "max_response_length": 2000,
+    "context_window": 10,
+    "verbose": false
+  },
+  "memory": {
+    "db_path": "data/memory.db",
+    "short_term_size": 100,
+    "episodic_retention_days": 90,
+    "backup_interval_hours": 24,
+    "auto_cleanup": true
+  },
+  "tools": {
+    "timeout": 30,
+    "max_concurrent": 3,
+    "shell_enabled": true,
+    "filesystem_enabled": true
+  },
+  "voice": {
+    "enabled": false,
+    "wake_word": "jarvis",
+    "stt_engine": "google",
+    "tts_engine": "android",
+    "audio_format": "wav"
+  },
+  "android": {
+    "use_termux_api": true,
+    "permission_level": "standard",
+    "api_timeout": 10
+  },
+  "security": {
+    "require_confirmation": ["delete", "modify_system", "install_package", "apply_changes"],
+    "audit_log": true,
+    "backup_before_changes": true,
+    "permission_check": true
+  },
+  "learning": {
+    "enabled": true,
+    "pattern_min_occurrences": 3,
+    "skill_autosave": true,
+    "feedback_learning": true
+  },
+  "network": {
+    "offline_first": true,
+    "timeout": 10,
+    "retry_count": 3
+  }
+}
